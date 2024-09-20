@@ -13,11 +13,15 @@ def hello_template(request):
     return HttpResponse(template.render())
 
 
+def thanks(request):
+    return HttpResponse('Thank You')
+
+
 def get_name(request):
     if request.method == 'POST':
         form = NameForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect("/thanks/")
+            return HttpResponseRedirect("/formtest/thanks")
 
     if request.method == 'GET':
         form = NameForm()
