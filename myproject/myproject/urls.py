@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('formtest/', include('formtest.urls')),
+    path('cbv/', include('classbasedview.urls')),
 ]
